@@ -1,0 +1,430 @@
+Lingo:
+Linting					= checking for errors
+Minifying				= removing unnecessary characters
+IDE						= Integrated Development Environment (edit, debug, build, compiling)
+Microdata				= data added to elements on a page
+Eval'ing				= evaluating
+Utilities				= gulp, grunt, sass
+resolution switching	= 1 <img> with srcset="" attributes for different resolutions of same image (no <picture>) aka topgrade listing page
+art direction			= wrapped by <picture> with different <source> each with srcset="" so image is cropped to size and optimised
+
+Sayings:
+* Everything With a "Real" Value is True
+===============
+lol
+===============
+http://www.1stwebdesigner.com/web-designer-jokes/?utm_content=bufferf1533&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+http://www.onemenny.com/blog/pictures-from-a-developers-life/
+
+===============
+HTML5
+===============
+Elements
+	- abbr					= abbreviation (value and hover over)
+	- address			= block around address
+	- article				= comment, blog post, news story, forumn
+	- aside					= related content
+	- bdi						= bi-directional isolation, good for usernames
+	- bdo					= bi-directional override <bdo dir="rtl"> (right to left text)
+	- blockquote		= to quote somewhere (add cite)
+	- canvas				= spcae to draw with code
+	- caption				= use after table to give it a title
+	- cite					= to quote
+	- code					= duhh
+	- colgroup			= group collumns rather than class for each
+	- datalist				= type and select value
+	- dl, dt dd				= list of stuff and definitions
+	- del						= deleted (strike through)
+	- details				= native accordion use with <summary>
+	- dialog				= box relevant so something (close and open)
+	- em					= emphasise
+	- figure					= comment on a image, along with figcaption
+	- mark					= key info/highlight
+	- optgroup 			= group inside a option list
+	- output				= value returned following some majic
+	- progress			= shows a progresss bar, use with the max
+	- q						= quotes
+	- sub					= small text (e.g. 4th)
+	- tfoot					= footer of table
+	- time					= used to show time, or computer readable (seo)
+	- wbr					= word break recommendation, resized and break here (coool)
+	
+Attributes
+	- accept					on input
+	- accept-charset		on form
+	- async/defer	 		on script
+	- autocomplete		on form input
+	- autofocus	 			on <button>, <input>, <keygen>, <select>, <textarea>
+	- contenteditable		on anything (maybe mob development) tadaa <style contenteditable="true">body style {display:block; white-space:pre;} p{color:red;}</style>
+	- cite						on blockquote (give credit to)
+	- data-*					on all (local store of data like aJax without server side)
+	- download				on a or area (set name and download file)
+	- for							on label or output (label for inputs and sliders?)
+	- formaction			on input or button (multiple submission for one form)
+	- hidden					on anything to hide (like disabled, without css)
+	- http-equiv				on meta (use to annoy! <meta http-equiv="refresh" content="1">)
+	- list							on input (use with datalist, type and get results) cool
+	- manifest				on html (specified that page will be cached)
+	- multiple					on input or select (upload multiple, or select a few)
+	- onbeforeunload		on body (box to say are you sure you want to leave) #thatThing!
+	- onblur/focus/input	on all (when clicked out/touched/finished do something)
+	- oncontextmenu		on all (for when right clicked)
+	- oncopy/cut			on all (when something has been copied)
+	- ondbclick				on all (double click)
+	- onkeydown/up		on app (pressing keys control)
+	- onload					on all
+	- onmousedown/up	on all
+	- onpaste					on all
+	- onreset					on form
+	- onresize				on body (page resized)
+	- onselect				on all (you got me)
+	- onwheel				on all (spin mouse wheel)
+	- open						on details
+	- pattern					on input (validation)
+	- readonly				on input or textarea (there but not editable)
+	- required				on input or select or textarea (arrrrrg didn't go away in chrome)
+	- reversed				on ol (turnb the list backwards)
+	- sandbox				on iframe (stops scrips and form submissions working)
+	- spellcheck			on all (I think the default is true, but can be turned false)
+	- start						on ol (where to start counting from)
+	- step						on input (how many to count up or down)
+	- tabindex				on all (order which press tab goes to)
+	
+	
+
+
+===============
+Js JavaScript
+===============
+- DOM = Document Object Model (aka the page)
+- best place is bottom of file as increases page load lime
+- .write over-rides all content  || document.write(Date());
+- console.log() outputs values to console
+- var = define a variable
+- statements must end in a ;
+- identifiers cannot be numbers
+- Functions can be used many times
+- CASE sensitive! usually camelCase || lastName 
+- works in order
+- statements ending in ; is optional
+- Functions = statements combined together
+- white spaces make no difference
+- '\' allows line break, but does the same as if was one line
+- // or /**/ (like css) are comments
+
+23.10.14http://www.w3schools.com/js/js_variables.asp
+
+- variables begin with letter or $ or _ then can contain numbers
+- case sensitve
+-  display variable |  <p id="age"></p> var pi = 3.14; document.getElementById("age").innerHTML = pi;
+- declare variables 1st
+
+- TYPES
+	var length = 16;                              					// Number assigned by a number literal
+	var points = x * 10;                         					// Number assigned by an expression literal
+	var lastName = "Johnson";                 			// String assigned by a string literal
+	var cars = ["Saab", "Volvo", "BMW"];				// Array  assigned by an array literal
+	var x = {firstName:"John", lastName:"Doe"};	// Object assigned by an object literal
+- Booleans two values: true or false.  | var x = true; var y = false;
+
+- FUNCTIONS
+- good read - http://www.tutorialspoint.com/javascript/javascript_functions.htm :-)
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(32);
+- functions passes the 'return'
+- Can be called before declaed....so code can be put anywhere
+
+- OBJECT is the thing, PROPERTY is something about it, METHOD is what it can do E.G. CAR, MAKE, car.drive
+- accessing an object as person.lastName;  or person["lastName"]; 
+- accessing an method | name = person.fullName(); name = person.fullName;
+- variable declared outside of a function is GLOBAL so can be used anywhere, unlike if declared in a functions
+- local variable last until the function completes, global available until page is closed
+- .window objects can override global
+- html events to call js
+- to have same quotes in string (escape character) use \ just before e.g. | var answer = "He is called \"Johnny\""
+- String methods to modify string values
+- most of the time js counts from 0
+	.search	= returns position of result  from string
+	.slice		= extract a chunk (start, to) or (from) or (-before)
+	.substr		= similar to slice, but (start,then next)
+	.replace	= finds word and replaces it
+	casing
+	.concat	= array1.concat(array2) ....but use symbol operators instead (aka +)
+	.charAt	= character at position
+	.split		= separates mulitple vaues in a string
+
+- NaN = not a number
+- .toFixed() rounds numbers
+- ++ = increment 1
+- -- = decrement 1
+- setting a variable as += and -= and *= and /=does the variable plus or minus e.g  	x -= y
+- concat 2 strings with +
+	Math.min .max
+	.random() = only between 0 and 1
+	Math.round = to nearest whole number
+	Math.ceil = rounds up to whole number (4.2 becomes 5)
+	Math.floor = drounds down
+- Date() = displays the date
+- Date merthods to pull what's required
+- Month 0 - 11 (January = 0)
+- to call n array, name[0]
+- ARRAYS [numbers] while OBJECTS {names}
+- .length counts results in an array
+- .sort alphabetically sorts an array
+- adding to an existing array | name[name.length]
+- looping an array |  for	(index = 0; index < name.length; index++) {text += fruits[index];}
+- Array Methods
+	other than looping can .valueOf() or .toString() or .join
+	.join can have a separator | name.join(" * ");
+	.pop 		= removes the last value of an array
+	.push		= adds a new value to the array
+	.splice		= specify where to add new value, how many shold be removed then variables to add (best removal)  e.g. fruits.splice(2, 0, "Lemon", "Kiwi");
+	.length		= adds to end
+	pop or shift over delete of an array
+	.sort			= sorts an array	
+	.reverse	= reverse sorts
+- Boolean = yes/no on/off true/flase
+	- no need to add word boolean, just do the compare
+	- comparison operators:
+		==	equal to
+		==	equal to and eual type
+		!=	
+		!==
+		&&	and
+		||		or
+		!		not
+	- ALSO Ternary operator..... variablename = (condition) ? value1:value2 AKA name, what you dont want: what you do want!
+	- convert to proper type before comparing
+	- functions	
+		
+
+29.11.14 http://www.w3schools.com/js/js_array_methods.asp	
+04.02.16 http://www.w3schools.com/js/js_comparisons.asp
+
+UDACITY COURSE TIME!.....
+
+
+===============
+JSP
+===============
+http://www.tutorialspoint.com/jsp/jsp_overview.htm
+ - getContent = CMS page
+
+
+===============
+CSS
+===============
+http://www.quirksmode.org/css/selectors/
+
+
+===============
+Velocity
+===============
+#set ($product_key = $information.getRequestAttribute('product').getAttributeValuesMap("UNIQUE_PRODUCT_KEY").toLowerCase())
+<meta property="og:image" content="http://stage-topgrade-53.fresca.co.uk/pws/images/catalogue/products/$product_key/small/$product_key$product_colour$jpg"/>
+
+#set ($product_id = $information.getRequestAttribute('product').getId())
+var prodid = $product_id;
+
+Please find “session.jsp” attached. You can add this to the footer.jsp by the following code
+
+<jsp:include page="session.jsp" />
+
+
+
+===============
+PHP
+===============
+Browser:
+http://127.0.0.1/xampp/PROJECTS/test.php
+
+Local:
+C:\xampp\htdocs\xampp\PROJECTS
+
+Good explanation of OOP = http://www.diffen.com/difference/Class_vs_Object
+OOP
+"group simular taks into classes"
+- Class = bluprint of house
+- Object = the house
+- syntax for a class:
+			 class MyClass
+			{
+			  // Class properties and methods go here
+			}
+
+===============
+Sublime
+===============
+- Ctrl +P	= find file
+- Ctrl +R	= find id or somehing
+- Ctrl +SHIFT + P	= find command
+
+
+===============
+Node.js stuff
+===============
+allow javascript to run on your files
+can create webserver
+
+
+npm = node package manager
+
+browser sync:
+browser-sync start --server --files "css/*.css"
+
+run specific gulp things:
+gulp styles
+
+
+===============
+Python
+===============
+- 
+
+===============
+Google analytics GA
+===============
+- Google tag assistant add on in chrome
+- Filter verification
+Account	= The company (one id)
+Property	= website/mobile/app etc (next incremental from the original ID)
+View		= what you wish to see (default all), only from when created, when deleted data deleted
+User/per	= @google.com domain email address to add to account
+
+
+===============
+GRUNT
+===============
+Used to merge files for FAB + Jigsaw (local)
+
+To merge:
+1. Go to media server:						img1dev.dev.agile.bte.int 
+2. Go to compiler directory:				cd /opt/www/FarrowBall/pws/compiler/ 
+3. Check if grunt is already running:	pgrep -l grunt 
+4. Run grunt:										sudo grunt 
+
+
+===============
+GULP
+===============
+Used to merge files for Topgrade, GLTC (apparently)
+
+- Similar to GRUNT.....but better n faster!
+- Uses small (20line ish) plugins
+- Uses streams
+- paths in parallel
+- uses node streams
+- useful plugins:
+	- sass
+	- font
+
+Udacity course
+	~ also atom editor (maybe for home)
+	~ sublime setting up
+	~ build tools, web devs hate xml (so no ant or maven)! rather javascript based (GULP or GRUNT)
+- Grunt config in sequel, Gulp code and streams
+- all projects start with a gulpfile.js (which is a node.js script)
+- to run test, simply run gulp
+- in memory stream so faster
+- live editing uses a watcher, changes pull through straight away
+- 
+
+===============
+Browserfiy
+===============
+- managing order of script
+- use modules so can be re-used easier
+- 
+
+
+===============
+BEM
+===============
+OOCSS
+	- Separate structure and skin		= classes rather than rely on html elements
+	- Separate container and content	= rarely location based, describe h2 then extra (mixiin) for specifics eg <h2 class="category">, no need for overrides to look normal
+
+"As a starting point, I recommend creating the following objects: headings, lists, text treatments and links, containers, media, grids, and template. Create all your smallest objects first, before you build whole pages, and your CSS will stay small by default."
+
+- Good example = http://csswizardry.com/case-studies/
+
+
+===============
+SEO
+===============
+https://profservices.btexpedite.co.uk/confluence/pages/viewpage.action?pageId=8554597#SearchEngineOptimisation(SEO)-UpdatingCategoriesBestPractice(Seasonalchanges)
+
+
+===============
+Imporve my coding (notes from meetings)
+===============
+- use full names
+- dash to separate one word 
+- always use correct case
+- itemscope and itemprop
+- f-dash our code so we know we wrote it
+- REM vs EM vs % 
+	https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+	•	Use em units for sizing that should scale depending on the font size of an element other than the root.
+	•	Use rem units for sizing that doesn’t need em units, and that should scale depending on browser font size settings.
+	•	Use rem units unless you’re sure you need em units, including on font sizes.
+	•	Use rem units on media queries
+	•	Don’t use em or rem in multi column layout widths - use % instead.
+	•	Don’t use em or rem if scaling would unavoidably cause a layout element to break.
+- use OWASP ESAPI to escape chracters - http://owasp.github.io/owasp-java-encoder/encoder/apidocs/org/owasp/encoder/Encode.html
+
+owasp library
+http://owasp.github.io/owasp-java-encoder/encoder/apidocs/org/owasp/encoder/Encode.html
+
+Non meetings
+- wraps&nbsp;here - orphans and windows workaround (so not dropped fits the same size, does it doesnt...no single word a line!)
+
+
+Become a python developer! not a Ruby :-) £££££
+
+
+http://imgur.com/KzCHMAx
+
+
+================
+UDACITY	
+================
+Browser Rendering Optimization
+https://www.udacity.com/course/browser-rendering-optimization--ud860
+
+http://jakearchibald.github.io/jank-invaders/
+
+- Juddering - 1 sec delays etc JAnky
+- bad performance kills good sites
+- people want smooth
+- 60hz screen reffresh, so try to do a 60fps to be smooth
+- 10/12ms o make a smooth frame
+	- get request
+	- html returned
+	- parse html
+	- DOM
+	- DOM + CSS = Render Tree
+	- Paint layout/reflow (spacing)
+	- vector and rasteriser rendering (image decode)
+	- coposite layers (layer on layers) - only trigered by opacity and transform
+	- GPU puts pixels on screen
+- only rendered items enter the DOM ....so display none should not load!
+- Javascript > Style > Layout  > Paint > Composite
+- https://csstriggers.com/ - what stage does each perform, get the cheapest!
+- decrease layout and paint
+- RAIL  Response Animation Idle Load
+- 15ms post load, 100ms for fold (10th second)
+- Response 100ms, Animate 16ms, Idle 50ms, Load 1sec
+- FLIP (First Last Invert Play) - know before and after, add values to transform, do it
+- 
+
+
+
+
+
+
+
+
